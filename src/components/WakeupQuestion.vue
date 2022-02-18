@@ -6,7 +6,7 @@
       <strong>{{ question.question }} </strong>
     </p>
     <a :href="question.url">
-      <img target="_blank" src="@/assets/twitter-icon.png" />Zur Diskussion auf
+      <img target="_blank" src="@/assets/twitter-icon.png" /> Zur Diskussion auf
       Twitter</a
     >
   </article>
@@ -46,7 +46,7 @@ article {
 }
 
 a {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   color: #023e8a;
@@ -57,5 +57,6 @@ a {
 img {
   object-fit: contain;
   height: 1rem;
+  margin-right: 0.25rem;
 }
 </style>
