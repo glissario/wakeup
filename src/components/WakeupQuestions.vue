@@ -2,12 +2,15 @@
   <main>
     <h1><strong>#Aufwachfragen</strong> des Tages</h1>
     <h2>{{ compareDate + today.getFullYear() }}</h2>
-    <WakeupQuestion
-      v-for="(question, i) in filteredQuestion"
-      :key="i"
-      :question="question"
-    />
+    <div class="question-wrapper">
+      <WakeupQuestion
+        v-for="(question, i) in filteredQuestion"
+        :key="i"
+        :question="question"
+      />
+    </div>
     <p>inspired by Udo Wiegärtner</p>
+    <p>#Aufwachfragen</p>
   </main>
 </template>
 
@@ -45,5 +48,17 @@ main {
   background-color: #023e8a;
   padding: 2rem;
   color: white;
+}
+
+@media screen and (min-width: 640px) {
+  main {
+    width: 32rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  main {
+    width: 55rem;
+  }
 }
 </style>
