@@ -3,7 +3,7 @@
     <p>Nr: {{ question.index }}, {{ year }}</p>
 
     <p>
-      <strong>{{ question.question }} </strong>
+      <strong>{{ question.question.replace("<br />","") }} </strong>
     </p>
     <a :href="question.url">
       <img target="_blank" src="@/assets/twitter-icon.png" /> Zur Diskussion auf
