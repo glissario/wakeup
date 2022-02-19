@@ -1,9 +1,8 @@
 <template>
   <article>
     <p>Nr: {{ question.index }}, {{ year }}</p>
-
-    <p>
-      <strong>{{ question.question.replace("<br />","") }} </strong>
+    <p v-for="(question, i) in questionLines" :key="i">
+      <strong>{{ question }} </strong>
     </p>
     <a :href="question.url">
       <img target="_blank" src="@/assets/twitter-icon.png" /> Zur Diskussion auf
@@ -21,6 +20,7 @@ export default {
         this.question.date.length - 4,
         this.question.date.length
       ),
+      questionLines: this.question.question.split("<br />"),
     };
   },
   props: {
