@@ -29,6 +29,7 @@ export default {
     };
   },
   beforeMount() {
+    this.getdata();
     let month = (this.today.getMonth() + 1).toString();
     month.length === 1 ? (month = "0" + month) : month;
     this.compareDate = this.today.getDate() + "/" + month + "/";
@@ -37,6 +38,14 @@ export default {
         ? this.filteredQuestion.push(element)
         : this.filteredQuestion;
     });
+  },
+  methods: {
+    async getdata() {
+      const httpElement =
+        "https://github.com/glissario/wakeup/blob/master/src/assets/wakeup.json";
+      const jsonData = await fetch(httpElement);
+      console.log(jsonData);
+    },
   },
 };
 </script>

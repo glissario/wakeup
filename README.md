@@ -1,24 +1,6 @@
 # wakeup
 
-## Project setup
-```
-npm install
-```
+## Das Projekt
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Visualisierung der #Aufwachfragen von Udo Wiegärtner  
+https://github.com/kosmonautica/Aufwachfrage
